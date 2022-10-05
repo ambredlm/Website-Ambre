@@ -22,7 +22,6 @@ h3{
   background-size: cover;
   background-position: center;
   padding: 100px 0;
-  margin-left:75px;
   text-align: center;
 }
 
@@ -37,6 +36,7 @@ background-position: center;
 .container {
 	width: 800px;
 	margin: auto;
+	max-width: 100%;
 } 
 
 
@@ -54,10 +54,12 @@ background-position: center;
 .cards{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-
 	grid-gap: 16px;
+	margin-bottom: 40px;
 }
-
+.card-white img {
+	object-fit: cover;
+}
 #footer{
 background-color: #72757e;
 background-color: grey;
@@ -68,9 +70,13 @@ border-radius: 100;
 text-align: right;
 }
 
-
-
-
+@media screen and (max-width: 600px) {
+	.cards{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 16px;
+	}
+}
 
 
 
